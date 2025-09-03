@@ -1,0 +1,114 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.services h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.services h2 small {
+  font-weight: 400;
+}
+
+/* swiper */
+.swiper {
+  width: 100%;
+  height: auto;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-branco-gelo);
+  color: var(--color-preto-profundo);
+  box-shadow: 0 0 0.8rem 0 rgba(0, 0, 0, 0.812);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.swiper-slide img {
+  width: 85%;
+  height: 10rem;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  box-shadow: 0 0 0.3rem var(--color-preto-profundo);
+  margin-bottom: 0.5rem;
+}
+
+.swiper-slide article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  cursor: default;
+}
+
+.swiper-slide article h3,
+.swiper-slide article p,
+.swiper-slide article a {
+  color: var(--color-preto-profundo);
+}
+
+.swiper-slide article h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  border-bottom: solid 0.01rem var(--color-dourado-metalico);
+}
+
+.swiper-slide article p {
+  font-size: 0.9rem;
+  font-weight: 400;
+  max-width: 20rem;
+  margin-bottom: 0.5rem;
+}
+
+.swiper-slide article a {
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  margin-top: 1rem;
+  background-color: var(--color-dourado-metalico);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--color-branco-gelo);
+  color: var(--color-preto-profundo);
+  border-radius: 50%;
+  box-shadow: 0 0 0.3rem 0 rgba(0, 0, 0, 0.459);
+}
+
+.swiper-button-prev::after {
+  content: "\f053";
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.swiper-button-next::after {
+  content: "\f054";
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.swiper-button-prev {
+  left: 0.3rem;
+  top: 62%;
+}
+
+.swiper-button-next {
+  right: 0.3rem;
+  top: 62%;
+}

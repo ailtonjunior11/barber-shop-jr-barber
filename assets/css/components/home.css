@@ -1,0 +1,93 @@
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../img/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  z-index: -1;
+  mask-image: linear-gradient(to bottom, #000 50%, rgba(0, 0, 0, 0.0014) 90%);
+}
+
+.text-home {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.text-home h1 {
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 5.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.text-home span {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  color: var(--color-dourado-metalico);
+}
+
+.image-home {
+  max-width: 22rem;
+}
+
+.image-home img {
+  width: 100%;
+}
+
+.redes-sociais {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 3rem;
+}
+
+.redes-sociais a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 300;
+}
+
+.redes-sociais a img {
+  height: 2rem;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .home::before {
+    display: none;
+  }
+
+  .text-home {
+    max-width: 100%;
+    padding: 0 2rem;
+    text-align: left;
+  }
+
+  .text-home h1 {
+    font-size: 3.5rem;
+    line-height: 3.3rem;
+  }
+
+  .text-home span {
+    font-size: 1.5rem;
+  }
+
+  .redes-sociais {
+    justify-content: left;
+  }
+}

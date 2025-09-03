@@ -1,0 +1,146 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4.1rem;
+  z-index: 100;
+  background: rgba(51, 51, 51, 0.492);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(14.3px);
+  -webkit-backdrop-filter: blur(14.3px);
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+header .logo span {
+  font-size: 1.1rem;
+  font-weight: 400;
+  cursor: default;
+}
+
+header .logo img {
+  padding: 0.2rem;
+  background-color: var(--color-dourado-metalico);
+  border: solid 0.15rem var(--color-branco-gelo);
+  border-radius: 50%;
+}
+
+/* menu desktop */
+header .menu {
+  display: flex;
+}
+
+header .menu li {
+  padding-inline: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+header .menu li a {
+  position: relative;
+  font-weight: 300;
+}
+
+/* config menu mobile */
+/* botóes abrir e fechar menu mobile */
+.btn-menu-mobile {
+  display: none;
+  position: fixed;
+  top: 0.7rem;
+  right: 0.6rem;
+}
+
+.open-icon {
+  height: 2.6rem;
+  cursor: pointer;
+}
+
+.close-icon {
+  height: 2.1rem;
+  cursor: pointer;
+  display: none;
+}
+
+/* Menu mobile */
+.menu-mobile {
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+  text-align: right;
+  position: fixed;
+  top: 4.1rem;
+  right: 0;
+  width: 0%;
+  height: 100vh;
+  /* overflow: hidden; */
+  background-color: var(--color-dourado-metalico);
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-mobile.active {
+  display: block;
+  width: 60%;
+}
+
+.menu-mobile li {
+  padding-block: 1rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.menu-mobile li a {
+  text-align: center;
+  font-weight: 400;
+  margin-right: 1rem;
+}
+
+.menu-mobile li:hover {
+  background-color: var(--color-preto-profundo);
+}
+
+/* responsividade */
+/* telas maiores */
+@media (min-width: 1280px) {
+  header .menu li a::after {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 0.01rem;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-branco-gelo);
+    transition: all 0.5s ease-in-out;
+  }
+
+  header .menu li a:hover::after {
+    width: 100%;
+  }
+}
+
+/* telas medias */
+@media (max-width: 768px) {
+  header .btn-menu-mobile {
+    display: block;
+  }
+
+  header .menu {
+    display: none;
+  }
+
+  header .logo {
+    display: none;
+  }
+
+  header .menu-mobile {
+    display: block;
+  }
+}
