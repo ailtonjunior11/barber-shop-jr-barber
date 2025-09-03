@@ -80,14 +80,17 @@ header .menu li a {
   right: 0;
   width: 0%;
   height: 100vh;
-  /* overflow: hidden; */
-  background-color: var(--color-dourado-metalico);
+  padding-top: 2rem;
+  background: rgba(0, 0, 0, 0.56);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11.4px);
+  -webkit-backdrop-filter: blur(11.4px);
   transition: all 0.3s ease-in-out;
 }
 
 .menu-mobile.active {
   display: block;
-  width: 60%;
+  width: 50%;
 }
 
 .menu-mobile li {
@@ -103,13 +106,13 @@ header .menu li a {
   margin-right: 1rem;
 }
 
-.menu-mobile li:hover {
-  background-color: var(--color-preto-profundo);
-}
-
 /* responsividade */
-/* telas maiores */
+/* telas large desktop */
 @media (min-width: 1280px) {
+  .menu-mobile {
+    display: none;
+  }
+
   header .menu li a::after {
     position: absolute;
     content: "";
@@ -126,8 +129,15 @@ header .menu li a {
   }
 }
 
-/* telas medias */
-@media (max-width: 768px) {
+/* telas desktop */
+@media (min-width: 1024px) {
+  .menu-mobile {
+    display: none;
+  }
+}
+
+/* telas tablet */
+@media (max-width: 900px) {
   header .btn-menu-mobile {
     display: block;
   }
