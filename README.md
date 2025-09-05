@@ -13,3 +13,5 @@ Nesse projeto pude praticar o HTML, CSS e JavaScript, com um design moderno e cl
 </p>
 
   ### Mockups:
+https://github.com/user-attachments/assets/d96eaadb-9401-45aa-8c2c-545465797428
+
